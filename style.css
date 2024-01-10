@@ -1,0 +1,684 @@
+/*Import de la fuente Montserrat*/
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Import de la fuente Poppins*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Propiedades generales del css*/
+body{
+    background-color: #ECF0F3;
+}
+
+/*Margen left y right de la página*/ /*Lo utilizo para darle un margen left y right a las diferentes secciones*/
+.margin-container{    
+    padding: 15px 0px 110px 0px;    
+    margin: 0 auto;
+}
+
+
+/*Propiedades generales para los h4*/
+h4{
+    font-family: var(--font-principal);
+    font-size: 15px;
+    color: var(--color-h4);
+    letter-spacing: 2px; /* Ajusta la distancia entre las letras*/
+}
+
+/*Propiedades generales para los p*/
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-p);
+}
+
+/*Propiedades generales de los títulos de cada section*/
+h3{
+    color: var(--color-h4);
+    font-family: var(--font-principal); /*Fuente Montserrat*/
+    font-weight: 700;
+    font-size: 60px;
+}
+
+h5{
+    font-family: var(--font-principal);
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 35px !important; /*Ajusta la distancia entre las líneas de texto*/
+}
+
+h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 450;
+    color: var(--color-h4);
+    letter-spacing: 1px; /* Ajusta la distancia entre las letras*/
+}
+
+/*Propiedades generales del label*/
+label {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-p);
+    padding-bottom: 10px;
+  }
+
+/*Utilizo hr para crear una línea separadora de secciones*/
+hr{
+    height: 1px;
+    width: 95% !important; /*Hago más corta la línea horizontal*/
+    margin: 0 auto;
+    color: rgba(119, 136, 153, 0.534); /*Le asigno un color a la línea horizontal*/
+}
+
+/*Variables*/
+:root {
+    --color-primario: #272626;
+    --color-secundario: #FF014F;
+    --color-p: #2b2d2ee1;
+    --color-h4: #2b2d2eec;
+    --font-principal: 'Montserrat', sans-serif;
+}
+
+/*Header*/ /*CSS general del nav*/
+.navbar-brand, .nav-link{
+    color: var(--color-primario) !important;
+    font-family: var(--font-principal);
+}
+
+/*LOGO*/
+.navbar-brand{
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo-posicion{
+    padding-top: 20px;
+}
+
+/*Div del nav*/
+.navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: 30%;
+    margin-top: 10px;
+}
+
+/*Lista del nav*/
+.navbar-nav{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: 10px; /*Espacio entre opciones del nav*/
+    gap: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*Botón del nav*/
+.button-nav {
+    width: 140px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 20px;
+    border: 0px;
+    background-color: #ECF0F3;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+}
+
+.span-button-nav{
+    color: var(--color-secundario); /* Color del nombre */
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.margin-container-nav{    /*Lo utilizo para darle un margen left y right a las diferentes secciones*/
+    padding: 15px 50px 110px 0px;
+    margin: 0 auto;
+}
+
+/*MAIN*/
+main{
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+}
+
+.contenedor-main{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 100px;
+    width: 100%;
+    gap: 15vh;
+}
+
+.contenido-izquierdo{
+    flex: 0.6;
+    text-align: left;
+}
+
+.imagen-derecha{
+    flex: 0.45;
+}
+
+.imagen-derecha img{
+    width: 457px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+}
+
+.div-img{
+    left: 35px;
+    margin-top: 10px;
+     position: relative;
+    width: 90%;
+    height: auto;
+}
+
+
+/*Título principal del main h1*/
+.contenido-izquierdo h1 {
+    color: var(--color-primario); /* Color del h1 */
+    font-family: var(--font-principal); /*Fuente Montserrat*/
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100px !important; /*Ajusta la distancia entre las líneas de texto*/
+}
+/*Título principal del main h2*/
+.contenido-izquierdo h2 {
+    color: var(--color-primario);
+    font-family: var(--font-principal);
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contenido-izquierdo p{
+    line-height: 30px !important; /*Ajusta la distancia entre las líneas de texto*/
+}
+
+.nombre-main {
+    color: var(--color-secundario); /* Color del nombre */
+}
+
+/*ICONOS DEL MAIN*/
+.span-iconos-main{
+    display: flex;
+    margin-top: 15%;
+    margin-bottom: 20px;
+    gap: 30%;
+}
+
+/*ICONOS*/
+.icons-left{
+    font-size: 1.2rem;
+    padding: 12px 18px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.icons-right{
+    font-size: 1.5rem;
+    padding: 10px 16px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.facebook{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*Iconos con colores*/
+.linkedin-color {
+    color: var(--color-secundario);
+    border-radius: 5px;
+}
+
+.bi-gem{
+    color: rgb(230, 176, 42);
+    border-radius: 5px;
+}
+
+.bi-slack{
+    color: color-mix(in srgb, blue 50%, red 50%);
+}
+
+/*-------------------FEATURES-----------------*/
+.features{
+    padding: 10px;
+    padding-bottom: 100px;
+}
+/*Contenedor de las tarjetas*/
+.contenedor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
+    gap: 40px;
+}
+
+/*Div del título de features*/
+.section-titulo-features{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: left; /*Acomodo el contenido a la izquierda*/
+}
+
+/*Div de tarjeta*/
+.tarjeta{
+    width: calc(33.33% - 30px);
+    height: 340px;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    text-align: left;
+}
+/*Iconos de las tarjetas*/
+.tarjeta i{
+    color: var(--color-secundario);
+    font-size: 30px ;
+    padding-left: 15px;
+}
+
+.tarjeta h2{
+    font-size: 15px;
+}
+/*Ajustamos la fuente y tamaño del h5 en la section features*/
+.tarjeta h5{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+}
+
+/*-------------------PORTFOLIO-----------------*/
+
+.portfolio{
+    padding: 10px;
+    padding-bottom: 100px;
+}
+
+/*Div de títulos de cada section*/
+.section-titulos{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center; /*Acomodo el contenido al centro*/
+}
+/*Div de la tarjeta portfolio*/
+.tarjeta-portfolio{
+    width: calc(33.33% - 30px);
+    height: 450px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    text-align: left;
+}
+/*div de las imagenes de las tarjetas del section portfolio*/
+.tarjeta-portfolio img{
+    width: 100%;
+    height: 215px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.tarjeta-portfolio h6{
+    margin-top: 20px;
+}
+
+/*Alineo los h6 debajo de la imagen del portfolio de cada tarjeta, los separo uno a la izquierda y otro a la derecha*/
+.text-bottom-img{
+    display: flex;
+    justify-content: space-between;
+}
+/*-----------------------RESUME--------------------*/
+.timeline{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* TAB del section Resume*/
+.div-tab{
+    display: flex;
+    width: 98%;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*div para controlar las propiedades de las cuatro opciones del tab*/
+.tab {
+    flex: 1;
+    padding: 38px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 15px;
+}
+
+/*Le doy un box-shadow a la opción que se le pasa el puntero por encima con hover*/
+.tab:hover {
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+}
+
+/*Cambio las propiedades de todos los h4 de la class tab*/
+.tab h4{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0;
+}
+
+/*Le asigno un color al h4 del div con class tab cuando pasa el puntero por encima*/
+.tab h4:hover{
+    color: var(--color-secundario);
+}
+
+/*Div de los titulos del timeline left y right*/
+.section-titulos-timeline{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: left; /*Acomodo el contenido a la izquierda*/
+}
+
+.section-titulos-timeline h3{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.border-left{
+    width: 100%;
+    border-left: 5px solid #918f8f34;
+}
+
+.container-timeline-left{
+    display: grid;
+    width: 92%;
+    gap: 50px;
+}
+
+/*Div contenedor principal de los BOX */
+.caja-timeline{
+    width: 100%;
+    padding: 20px;
+    margin-left: 24px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/*Div que contiene el texto y calificación unidos*/
+.container-left{
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+    justify-content: space-between;
+}
+
+/*Div superior contenedor de texto izquierdo*/
+.div-top-timeline-text{
+    width: 80%;
+}
+/*Calificación derecha de cada div*/
+.calificacion-timeline{
+    width: 20%;
+    justify-content: right;
+    display: flex;
+    align-items: center;
+}
+
+.calificacion-timeline h4{
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 25px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.text-timeline h5{
+    font-size: 22px;
+    padding-bottom: 0;
+}
+
+.text-timeline h6{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.container-bottom{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contenedor-hr-resume{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/*---------After y before de la section resume---------*/
+
+/*Circulo*/
+.container-left::before {
+    content: '';
+    position: relative;
+    width: 20px;
+    height: 18px;
+    border: 4px solid #918f8f34;
+    background-color: #ECF0F3;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    border-radius: 40px;
+    z-index: 2;
+    left: -11%;
+    top: -7px;
+}
+
+/*Línea horizontal*/
+.container-left::after {
+    content: '';
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background: #918f8f34;
+    z-index: 1;
+    left: -104%;
+    top: 23%;
+}
+
+/*------------------------BLOG---------------------*/
+.blog{
+    padding: 10px;
+    padding-bottom: 100px;
+}
+
+/*Div de la tarjeta blog*/
+.tarjeta-blog{
+    width: calc(33.33% - 30px);
+    height: 450px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*div de las imagenes de las tarjetas del section blog*/
+.tarjeta-blog img{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    bottom: 50px;
+    border-radius: 10px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+}
+
+.tarjeta-blog h6{
+    position: relative;
+    bottom: 30px;
+}
+
+.tarjeta-blog h5{
+    position: relative;
+    bottom: 35px;
+}
+
+/*-----------------------CONTACT---------------------*/
+.contact{
+    padding: 10px;
+    padding-bottom: 100px;
+}
+
+.contenedor-izquierdo-contact{
+    width: 40%;
+}
+
+.contenedor-derecho-contact{
+    width: 56%;
+}
+
+/*Lo utilizo en la section contact para darle más margin-top y distanciarlo del título de la section*/
+.contenedor-contact{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
+    gap: 40px;
+}
+
+/*Div dentro del contenedor izquierdo en contact*/
+.div-contact{
+    width: 100%;
+    height: 650px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    text-align: left;
+}
+
+/*div de las imagenes de las tarjetas del section contact*/
+.div-contact img{
+    width: 100%;
+    bottom: 50px;
+    border-radius: 10px;
+}
+
+/*---------------------FORMULARIO DEL CONTACT----------------------*/
+.formulario{
+    height: 650px;
+    text-align: left;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+}
+
+.campo{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-juntos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.301);
+}
+
+.message input{
+    height: 400px;
+}
+
+
+.submit{
+    background-color: var(--color-secundario);
+    color: white;
+    width: 100%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*------------------FOOTER------------------*/
+.footer{
+    padding: 10px;
+    padding-bottom: 150px;
+}
+
+.div-footer{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center; /*Acomodo el contenido al centro*/
+    text-align: center;
+}
+
+.div-footer img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 3px solid rgba(128, 128, 128, 0.301);
+}
+
+.div-footer h5{
+    padding: 0;
+    margin: 0;
+    color: var(--color-h4);
+    letter-spacing: 2px; /* Ajusta la distancia entre las letras*/
+}
+
+.div-footer h6{
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/*Queries del css*/
+
+@media (min-width: 1000px) {
+    .margin-container-nav{        
+      max-width: 900px;
+    }
+    .margin-container{        
+        max-width: 900px;
+      }
+}
+
+@media (min-width: 1300px) {
+    .margin-container-nav{
+      max-width: 1200px;
+    }
+    .margin-container{
+        max-width: 1200px;
+      }
+}
