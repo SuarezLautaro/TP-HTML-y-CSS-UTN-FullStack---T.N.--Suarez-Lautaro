@@ -1,6 +1,4 @@
---------------IMPORTANTE------------------
-LO TERMINO DE MODIFICAR PARA EL 15/01/2024
-------------------------------------------
+--------------IMPORTANTE: LO TERMINO DE MODIFICAR PARA EL 15/01/2024--------------
 
 Logré realizar la página web portfolio, sin embargo, no es responsive.
 Trabajo realizado en menos de 48 horas dado que eliminé los archivos anteriores por mala implementación de margins y paddings generales.
