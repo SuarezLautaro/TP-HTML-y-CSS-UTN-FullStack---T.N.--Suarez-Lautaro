@@ -63,7 +63,7 @@
     <!--MAIN-->
     <main class="home">
         <!--HOME-->
-        <div class="contenedor-main margin-container">
+        <div class="contenedor-main margin-container div-centrar">
             <div class="contenido-izquierdo">
                 <h4>WELCOME TO MY WORLD</h4>
                 <h1><b>Hi, I'm <span class="nombre-main">Sheroz Mir </b></span></h1>
@@ -129,7 +129,7 @@
             </div>
         </div>
         <!--Contenedor de las tarjetas-->
-        <div class="contenedor">
+        <div class="contenedor-features">
             <div class="tarjeta">
                 <i class="bi bi-list"></i>
                 <h5>Business Stratagy</h5>
@@ -147,7 +147,7 @@
             </div>
         </div>
 
-        <div class="contenedor">
+        <div class="contenedor-features">
             <div class="tarjeta">
                 <i class="bi bi-twitch"></i>
                 <h5>Mobile App</h5>
@@ -548,7 +548,10 @@
                         </div>
                         <div class="campo" id="message">
                             <label for="">YOUR MESSAGE</label>
-                            <input placeholder="" required="" style="height: 194px;"></input>   <!--Le doy valores al height a través del style para expandir el cuadro del campo del input -->
+                            <div class="mensaje">
+                                <textarea placeholder="" required></textarea>
+                            </div>
+                            <!--<input placeholder="" required="" style="height: 194px;"></input>-->   <!--Le doy valores al height a través del style para expandir el cuadro del campo del input -->
                         </div>
                         <div class="campo">
                             <button class="submit" style="height: 50px;">SEND MESSAGE</button>  <!--Le doy 50 pixeles de height para lograr expandirlo de altura-->

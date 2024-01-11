@@ -163,26 +163,25 @@ main{
 }
 
 .contenido-izquierdo{
-    flex: 0.6;
+    flex: 1.3;
     text-align: left;
 }
 
 .imagen-derecha{
-    flex: 0.45;
+    flex: 1;
 }
 
 .imagen-derecha img{
-    width: 457px;
+    width: 98%;
     height: auto;
     border-radius: 15px;
     box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
 }
 
 .div-img{
-    left: 35px;
-    margin-top: 10px;
+    margin-top: 5%;
      position: relative;
-    width: 90%;
+    width: 100%;
     height: auto;
 }
 
@@ -267,7 +266,7 @@ main{
     padding-bottom: 100px;
 }
 /*Contenedor de las tarjetas*/
-.contenedor{
+.contenedor-features{
     width: 100%;
     display: flex;
     flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
@@ -284,7 +283,6 @@ main{
 /*Div de tarjeta*/
 .tarjeta{
     width: calc(33.33% - 30px);
-    height: 340px;
     margin-top: 50px;
     padding: 50px;
     border-radius: 10px;
@@ -304,7 +302,7 @@ main{
 /*Ajustamos la fuente y tamaño del h5 en la section features*/
 .tarjeta h5{
     font-family: 'Poppins', sans-serif !important;
-    font-size: 24px !important;
+    font-size: 22px !important;
     font-weight: 500 !important;
 }
 
@@ -318,9 +316,18 @@ main{
 /*Div de títulos de cada section*/
 .section-titulos{
     display: grid;
-    flex-wrap: wrap;
     justify-content: center; /*Acomodo el contenido al centro*/
+    text-align: center;
 }
+
+/*Contenedor de las tarjetas de los sections*/
+.contenedor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
+    gap: 40px;
+}
+
 /*Div de la tarjeta portfolio*/
 .tarjeta-portfolio{
     width: calc(33.33% - 30px);
@@ -615,11 +622,18 @@ input{
     border: 2px solid rgba(128, 128, 128, 0.301);
 }
 
-.message input{
-    height: 400px;
+/*MENSAJE*/
+.mensaje textarea{
+    width: 100%;
+    height: 170px;
+    padding: 10px;
+    resize: none;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.301);
 }
 
-
+/*ENVIAR MENSAJE*/
 .submit{
     background-color: var(--color-secundario);
     color: white;
@@ -665,7 +679,7 @@ input{
 
 /*Queries del css*/
 
-@media (min-width: 1000px) {
+@media (min-width: 468px) {
     .margin-container-nav{        
       max-width: 900px;
     }
@@ -674,11 +688,232 @@ input{
       }
 }
 
-@media (min-width: 1300px) {
+@media (max-width: 999px) and (min-width: 768px){
+
+    /*Posiciono el contenido izquierdo del main al centro*/
+    .contenido-izquierdo{
+        text-align: center;
+        flex: auto;
+    }
+
+    .span-iconos-main{
+        justify-content: center;
+        gap: 20%;
+    }
+
+    .div-centrar{
+        display: flow-root;
+    }
+}
+/*
+@media (min-width: 1000px) {
+    .margin-container-nav{        
+      max-width: 1000px;
+    }
+    .margin-container{        
+        max-width: 1000px;
+      }
+}
+*/
+
+@media (min-width: 768px) {
     .margin-container-nav{
       max-width: 1200px;
     }
     .margin-container{
         max-width: 1200px;
       }
+}
+
+
+/*--------------------QUERIE PRINCIPAL-------------------------*/
+@media only screen and (max-device-width: 1367px){
+
+    /*-----------------SECTION FEATURES----------------*/
+
+    /*Div contenedor de tarjetas*/
+    .contenedor-features{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /*Tarjetas de features*/
+    .tarjeta{
+        width: calc(33.33% - 30px);
+        margin-top: 50px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
+
+    /*-----------------SECTION PORTFOLIO---------------*/
+
+    /*Div contenedor de tarjetas*/
+    .contenedor{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /*Tarjeta portfolio*/
+    .tarjeta-portfolio{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5% 10%;
+        margin: 5% 0;
+    }
+
+    /*-------------------SECTION BLOG-------------------*/
+
+    /*Tarjeta blog*/
+    .tarjeta-blog{
+        width: 100%;
+        height: 450px;
+         margin-top: 50px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
+
+    /*-----------------SECTION CONTACT---------------------*/
+
+    /*Contenedor izquierdo*/
+    .contenedor-izquierdo-contact{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Contenedor derecho*/
+    .contenedor-derecho-contact{
+        width: 100%;
+    }
+
+    .div-contact{
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
+}
+
+/*--------------------QUERIE TABLET O MOBILE---------------------*/
+
+@media only screen and (max-device-width: 768px){
+
+    /*ICONS*/
+    .icons-left{
+        font-size: 1rem;
+        padding: 8px 14px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .icons-right{
+        font-size: 1rem;
+        padding: 8px 14px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    /*-----------------------MAIN----------------------*/
+
+    /*Contenido izquierdo del main*/
+    .contenido-izquierdo{
+        display: grid;
+        text-align: left;
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    /*-----------------SECTION FEATURES----------------*/
+
+    /*Div contenedor de tarjetas*/
+    .contenedor-features{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    /*Tarjetas de features*/
+    .tarjeta{
+        width: 100%;
+        margin-top: 50px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
+
+    /*-----------------SECTION PORTFOLIO---------------*/
+
+    /*Div contenedor de tarjetas*/
+    .contenedor{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /*Tarjeta portfolio*/
+    .tarjeta-portfolio{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5% 10%;
+        margin: 5% 0;
+    }
+
+    /*-------------------SECTION BLOG-------------------*/
+
+    /*Tarjeta blog*/
+    .tarjeta-blog{
+        width: 100%;
+        height: 450px;
+         margin-top: 50px;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
+
+    /*-----------------SECTION CONTACT---------------------*/
+
+    /*Contenedor izquierdo*/
+    .contenedor-izquierdo-contact{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Contenedor derecho*/
+    .contenedor-derecho-contact{
+        width: 100%;
+    }
+
+    .div-contact{
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        text-align: left;
+    }
 }
