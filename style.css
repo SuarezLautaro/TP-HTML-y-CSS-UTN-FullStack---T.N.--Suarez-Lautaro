@@ -219,6 +219,12 @@ main{
     gap: 30%;
 }
 
+.gap-icons-main{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
 /*ICONOS*/
 .icons-left{
     font-size: 1.2rem;
@@ -688,33 +694,6 @@ input{
       }
 }
 
-@media (max-width: 999px) and (min-width: 768px){
-
-    /*Posiciono el contenido izquierdo del main al centro*/
-    .contenido-izquierdo{
-        text-align: center;
-        flex: auto;
-    }
-
-    .span-iconos-main{
-        justify-content: center;
-        gap: 20%;
-    }
-
-    .div-centrar{
-        display: flow-root;
-    }
-}
-/*
-@media (min-width: 1000px) {
-    .margin-container-nav{        
-      max-width: 1000px;
-    }
-    .margin-container{        
-        max-width: 1000px;
-      }
-}
-*/
 
 @media (min-width: 768px) {
     .margin-container-nav{
@@ -724,7 +703,6 @@ input{
         max-width: 1200px;
       }
 }
-
 
 /*--------------------QUERIE PRINCIPAL-------------------------*/
 @media only screen and (max-device-width: 1367px){
@@ -810,35 +788,69 @@ input{
 
 @media only screen and (max-device-width: 768px){
 
-    /*ICONS*/
-    .icons-left{
-        font-size: 1rem;
-        padding: 8px 14px;
-        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
-        border-radius: 5px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
+    /*Cambios de tamaños de letra para el main únicamente dado que desconozco si toda la página debe verse igual en todos los dispositivos o no, motivo por el cuál le he dado otros toques a otras partes de la página*/
+    
+    main h4{
+        font-size: 10px;
     }
 
-    .icons-right{
-        font-size: 1rem;
-        padding: 8px 14px;
-        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
-        border-radius: 5px;
-        align-items: center;
-        justify-content: center;
-        display: flex;
+    .contenido-izquierdo h1{
+        font-size: 25px;
+        line-height: 50px !important;
+    }
+
+    .contenido-izquierdo h2{
+        font-size: 23px;
+    }
+
+    main p{
+        font-size: 11px;
     }
 
     /*-----------------------MAIN----------------------*/
 
     /*Contenido izquierdo del main*/
     .contenido-izquierdo{
+        flex: 0;
         display: grid;
         text-align: left;
         width: 100%;
         margin-left: 5%;
+    }
+
+    /*Contenido derecho del main (imagen)*/
+    .imagen-derecha{
+        flex: 1;
+    }
+
+    .imagen-derecha img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*ICONS*/
+    .icons-left{
+        font-size: 1rem;
+        padding: 4px 8px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .icons-right{
+        font-size: 1rem;
+        padding: 4px 8px;
+        box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    /*Span para gap de los iconos del main*/
+    .gap-icons-main{
+        gap: 5px;
     }
 
     /*-----------------SECTION FEATURES----------------*/
@@ -880,6 +892,50 @@ input{
         padding: 5% 10%;
         margin: 5% 0;
     }
+
+    /*------------------SECTION RESUME------------------*/
+
+    /*TAB*/
+    .width-tab{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .div-tab{
+        width: 95%;
+    }
+
+    .tab{
+        padding: 10px;
+    }
+    .tab h4{
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    /*TIMELINE*/
+    .timeline{
+        display: grid;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .section-titulos-timeline{
+        margin-top: 20px;
+    }
+
+    /*Before*/
+    .container-left::before{
+        left: -8.6%;
+    }
+
+    /*After*/
+    .container-left::after{
+        left: -103%;
+        top: 2%;
+    }
+    
 
     /*-------------------SECTION BLOG-------------------*/
 
