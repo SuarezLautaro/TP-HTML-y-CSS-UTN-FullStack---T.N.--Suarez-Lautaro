@@ -1,5 +1,5 @@
 
-Logré realizar la página web portfolio, sin embargo, no es del todo responsive. Tuve complicaciones para realizar algunas cosas, motivo por el cuál he improvisado un poco, por ejemplo con la section de my resume, quisiera aprender a hacer bien el timeline con ese detalle de línea izquierda en responsive. El Header no pude manipularlo de ninguna forma, no supe darle el uso que deseaba y solo me confundía más.
+Logré realizar la página web portfolio, sin embargo, no es del todo responsive. Tuve complicaciones para realizar algunas cosas, motivo por el cuál he improvisado un poco, por ejemplo con la section de my resume, quisiera aprender a hacer bien el timeline con ese detalle de línea izquierda en responsive.
 La verdad me ayudó muchísimo dado que me vi forzado a investigar cosas que jamás utilicé como el timelist, after, before, z-index, entre otros. Fue un proyecto desafiante, me motiva a continuar aprendiendo más sobre la programación web.
 
 Sobre el código:
