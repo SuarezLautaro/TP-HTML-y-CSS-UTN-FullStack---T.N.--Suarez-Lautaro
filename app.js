@@ -6,7 +6,7 @@ let img = document.getElementById('imagen-main');
 
 //Función para el cambio de imagen del main al pasar el mouse por encima de la respectiva imagen
 function mouseOver(){
-    img.src = "image/reemplazo-main.jpg"
+    img.src = "image/reemplazo-main.png"
 };
 //Evento para el respectivo cambio para cambiar la imagen inicial por otra.
 img.addEventListener('mouseover', mouseOver);
@@ -65,6 +65,50 @@ document.addEventListener('DOMContentLoaded', function() { //Gracias al evento d
 });
 
 //--------------------FEATURES-------------------
+
+document.addEventListener('DOMContentLoaded', function() { //El evento se activa para que se pueda ejecutar el script en el DOM
+    const contenedorFeatures = document.querySelector('.contenedor-features'); //Selecciono lo que contenga la class contenedor-features, en este caso contiene las cards del slider
+    const botonIzquierda = document.querySelector('.boton-izquierda'); //Selecciono el botón izquierdo del slider
+    const botonDerecha = document.querySelector('.boton-derecha'); //Selecciono el botón derecho del slider
+    const tarjetas = document.querySelectorAll('.tarjeta'); //Selecciono todas las cards de forma individual del slider
+    const tarjetaAncho = tarjetas[0].offsetWidth + 20; // Calculo el ancho de cada tarjeta y le sumo 20px para tener margen.
+    let currentIndex = 0;  //Variable para controlar el indice de la primer card
+
+    function scrollIzquierda() {    //Función que cambia el valor del índice actual para poder visualizar la última card
+        if (currentIndex === 0) {   //Verifico si el indice es 0 para identificar si estamos sobre la primer card
+            currentIndex = tarjetas.length - 3; //Le resto 3 a la longitud total de las cards para que muestre la última card y reubicar de esta forma el index.
+        } else {
+            currentIndex--; //En caso de que el indice no sea 0, muevo el indice a la izquierda para mostrar la card anterior.
+        }
+        const newPosition = currentIndex * tarjetaAncho; //Calculo la nueva posición en función del índice actual y ancho de una tarjeta
+        contenedorFeatures.scrollTo({ 
+            left: newPosition,  //Me aseguro de que se desplace a una nueva posición en el eje horizontal hacia la izquierda
+            behavior: 'smooth'  //Es para que se desplace de manera suave
+        });
+    }
+
+    function scrollDerecha() { //Función que cambia el valor del índice actual para poder visualizar la primera card al cambiar el indice a 0
+        if (currentIndex === tarjetas.length - 3) { //Verifica si estamos en la última card para que al activarse la función vuelva a la primer card por su indice
+            currentIndex = 0;
+        } else {
+            currentIndex++; //Si no estamos sobre la última card le sumo un valor al indice para asegurarme de que llegue completamente al final y muestre la última card
+        }
+        const newPosition = currentIndex * tarjetaAncho; //Calculo la nueva posición en función del índice actual y ancho de una tarjeta
+        contenedorFeatures.scrollTo({
+            left: newPosition, 
+            behavior: 'smooth'
+        });
+    }
+
+    botonIzquierda.addEventListener('click', scrollIzquierda);  //Llamo al evento para que al clickear el botón izquierdo se ejecute la función
+    botonDerecha.addEventListener('click', scrollDerecha);  //Llamo al evento para que al clickear el botón derecho se ejecute la función correspondiente
+});
+
+
+
+
+
+
 
 
 

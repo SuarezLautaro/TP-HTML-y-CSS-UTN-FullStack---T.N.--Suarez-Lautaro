@@ -271,12 +271,13 @@ main{
     padding: 10px;
     padding-bottom: 100px;
 }
+
 /*Contenedor de las tarjetas*/
 .contenedor-features{
-    width: 100%;
     display: flex;
-    flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
-    gap: 40px;
+    overflow-x: hidden; /*Oculto el desbordamiento horizontal*/
+    height: 280px;
+    margin-top: 50px;
 }
 
 /*Div del título de features*/
@@ -288,29 +289,65 @@ main{
 
 /*Div de tarjeta*/
 .tarjeta{
-    width: calc(33.33% - 30px);
-    margin-top: 50px;
-    padding: 50px;
+    flex: 0 0 auto; /*Hago que las tarjetas no se redimensionen*/
+    width: 300px; /*Ancho fijo de cada tarjeta*/
+    height: 250px;
+    margin-right: 20px; /*Le doy espacio entre las cards*/
+    margin-left: 15px;
+    margin-top: 15px;   /*Le doy distancia con la parte superior del div*/
+    padding: 20px;
     border-radius: 10px;
     box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
     text-align: left;
 }
+
 /*Iconos de las tarjetas*/
 .tarjeta i{
     color: var(--color-secundario);
-    font-size: 30px ;
+    font-size: 30px;
     padding-left: 15px;
 }
 
 .tarjeta h2{
     font-size: 15px;
 }
+
 /*Ajustamos la fuente y tamaño del h5 en la section features*/
 .tarjeta h5{
     font-family: 'Poppins', sans-serif !important;
     font-size: 22px !important;
     font-weight: 500 !important;
 }
+
+/*Ajusto la posición de los botones en el div*/
+.slider-controls {
+    display: flex;
+    justify-content: space-between; /*Posiciono los botones uno completamente a la izquierda y el otro completamente a la derecha*/
+    margin-top: 20px; 
+}
+
+/*Le doy el mismo estilo que las cards a los botones*/
+.boton-izquierda,.boton-derecha {
+    border: none;
+    background-color: var(--color-secundario); /*Le doy el color secundario de la página*/
+    color: #ECF0F3; /*Le doy el color del background al icono de flecha*/
+    border-radius: 10px;
+    box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+/*Flecha izquierda*/
+.boton-izquierda {
+    margin-left: 15px; /*Ajustamos el margen entre los botones*/
+}
+
+/*Flecha derecha*/
+.boton-derecha {
+    margin-right: 15px; /*Ajustamos el margen entre los botones*/
+}
+
 
 /*-------------------PORTFOLIO-----------------*/
 
