@@ -361,6 +361,58 @@ main{
     display: flex;
     justify-content: space-between;
 }
+
+.ocultar{
+    display: none;
+}
+
+.visible{
+    display: inline;
+}
+
+.div-oculto-portfolio span{
+    margin-top: 15px;
+}
+
+.div-oculto-portfolio p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-p);
+}
+
+.centrar-btn-oculto{
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-github{
+    font-size: 2.5rem;
+    padding: 1px 1px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;  
+}
+
+
+.tarjeta-portfolio button{
+    font-size: 1.2rem;
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-leerMas{
+    display: flex;
+    justify-content: center;
+}
+
+
 /*-----------------------RESUME--------------------*/
 .timeline{
     display: flex;
@@ -578,7 +630,6 @@ main{
     width: 100%;
     margin-top: 50px;
     display: flex;
-    flex-wrap: wrap; /*Flex-wrap es para que se adapte a distintos dispositivos*/
     gap: 40px;
 }
 
@@ -648,6 +699,15 @@ input{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/*Mensaje de enviado con éxito*/
+.contact-mensaje-enviado{
+    display: none;  /*Oculto el mensaje a mostrar al presionar submit*/
+    text-align: center; /*Alineo al centro el texto de dicho mensaje*/
+    color: green;   /*Le doy el color verde al texto*/
+    font-weight: bold;
+    margin-top: 50px;   /*Le doy un margin top para separarlo del formulario y de ilusión de estar fuera de dicho form*/
 }
 
 /*------------------FOOTER------------------*/
@@ -954,7 +1014,7 @@ input{
 
     /*Contenedor izquierdo*/
     .contenedor-izquierdo-contact{
-        width: 100%;
+        width: 65%;
         display: flex;
         justify-content: center;
     }
@@ -964,12 +1024,19 @@ input{
         width: 100%;
     }
 
+    /*div izquierdo con los datos de contacto*/
     .div-contact{
-        width: 50%;
+        width: 100%;
         height: 100%;
         padding: 30px;
         border-radius: 20px;
         box-shadow: -5px 0 15px rgb(255, 255, 255), 4px 4px 5px #8fa4b69f, 0 -5px 15px rgb(255, 255, 255);
         text-align: left;
     }
+
+    /*Formulario*/
+    .formulario{
+        width: 100%;
+    }
+
 }

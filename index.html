@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#">PORTFOLIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">RESUME</a>
+                            <a class="nav-link" href="#">RESUME</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">CLIENTS</a>
@@ -114,7 +114,7 @@
             <!--Div de la imagen derecha del main-->
             <div class="imagen-derecha">
                 <div class="div-img">
-                    <img src="image/main.png" alt="" class="imagen">   <!--Imagen derecha del main-->
+                    <img src="image/main.png" alt="" class="imagen" id="imagen-main">   <!--Imagen derecha del main-->
                 </div>
             </div>
         </div>  
@@ -183,30 +183,69 @@
         <div class="contenedor">
             <!--Tarjeta 1 del portfolio-->
             <div class="tarjeta-portfolio"> <!--Utilizo un div para cada tarjeta dentro del contenedor-->
-                <img src="image/portfolio-development.png" alt="imagen">    <!--Coloco la imagen de su respectiva tarjeta-->
-                <span class="text-bottom-img">    <!--Utilizo un span para almacenar ambos h6 y posicionarlos en la misma línea en el css-->
-                    <h6><span class="nombre-main">DEVELOPMENT</span></h6>   <!-- Utilizo la class "nombre-main" para darle el color secundario-->
-                    <h6>600</h6>
-                </span>
-                <h5>The services provide for design</h5>    <!--El h5 posicionado debajo de los h6-->
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-development.png" alt="imagen">    <!--Coloco la imagen de su respectiva tarjeta-->
+                    <span class="text-bottom-img">    <!--Utilizo un span para almacenar ambos h6 y posicionarlos en la misma línea en el css-->
+                        <h6><span class="nombre-main">DEVELOPMENT</span></h6>   <!-- Utilizo la class "nombre-main" para darle el color secundario-->
+                        <h6>600</h6>
+                    </span>
+                    <h5>The services provide for design</h5>    <!--El h5 posicionado debajo de los h6-->     
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <span class="btn-leerMas"><button class="leer-mas">Saber más</button></span> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
             <!--Tarjeta 2 del portfolio-->
             <div class="tarjeta-portfolio">
-                <img src="image/portfolio-application.png" alt="imagen">
-                <span class="text-bottom-img">
-                    <h6><span class="nombre-main">APLICATION</span></h6>
-                    <h6>750</h6>
-                </span>
-                <h5>Mobile app landing design & app maintain</h5>
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-application.png" alt="imagen">
+                    <span class="text-bottom-img">
+                        <h6><span class="nombre-main">APLICATION</span></h6>
+                        <h6>750</h6>
+                    </span>
+                    <h5>Mobile app landing design & app maintain</h5>
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <span class="btn-leerMas"><button class="leer-mas">Saber más</button></span> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
             <!--Tarjeta 3 del portfolio-->
             <div class="tarjeta-portfolio">
-                <img src="image/portfolio-photoshop.png" alt="imagen">
-                <span class="text-bottom-img">
-                    <h6><span class="nombre-main">PHOTOSHOP</span></h6>
-                    <h6>630</h6>
-                </span>
-                <h5>Logo design creativity & Application</h5>
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-photoshop.png" alt="imagen">
+                    <span class="text-bottom-img">
+                        <h6><span class="nombre-main">PHOTOSHOP</span></h6>
+                        <h6>630</h6>
+                    </span>
+                    <h5>Logo design creativity & Application</h5>
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <span class="btn-leerMas"><button class="leer-mas">Saber más</button></span> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
 
         </div>
@@ -214,32 +253,71 @@
         <div class="contenedor">
             <!--Tarjeta 4 del portfolio-->
             <div class="tarjeta-portfolio">
-                <img src="image/portfolio-figma.png" alt="imagen">
-                <span class="text-bottom-img">
-                    <h6><span class="nombre-main">FIGMA</span></h6>
-                    <h6>360</h6>
-                </span>
-                <h5>Mobile app landing design & Services</h5>
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-figma.png" alt="imagen">
+                    <span class="text-bottom-img">
+                        <h6><span class="nombre-main">FIGMA</span></h6>
+                        <h6>360</h6>
+                    </span>
+                    <h5>Mobile app landing design & Services</h5>
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <span class="btn-leerMas"><button class="leer-mas">Saber más</button></span> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
             <!--Tarjeta 5 del portfolio-->
             <div class="tarjeta-portfolio">
-                <img src="image/portfolio-web-design.png" alt="imagen">
-                <span class="text-bottom-img">
-                    <h6><span class="nombre-main">WEB DESIGN</span></h6>
-                    <h6>280</h6>
-                </span>
-                <h5>Design for tecnology & services</h5>
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-web-design.png" alt="imagen">
+                    <span class="text-bottom-img">
+                        <h6><span class="nombre-main">WEB DESIGN</span></h6>
+                        <h6>280</h6>
+                    </span>
+                    <h5>Design for tecnology & services</h5>
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <span class="btn-leerMas"><button class="leer-mas">Saber más</button></span> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
             <!--Tarjeta 6 del portfolio-->
             <div class="tarjeta-portfolio">
-                <img src="image/portfolio-web-design-2.png" alt="imagen">
-                <span class="text-bottom-img">
-                    <h6><span class="nombre-main">WEB DESIGN</span></h6>
-                    <h6>690</h6>
-                </span>
-                <h5>App for tecnology & services</h5>
+                <div class="card-texto-portfolio">
+                    <img src="image/portfolio-web-design-2.png" alt="imagen">
+                    <span class="text-bottom-img">
+                        <h6><span class="nombre-main">WEB DESIGN</span></h6>
+                        <h6>690</h6>
+                    </span>
+                    <h5>App for tecnology & services</h5>
+                </div>
+                <!--Añado un div para manipular el contenido a ocultar y mostrar con el botón-->
+                <div class="texto-adicional ocultar">
+                    <div class="div-oculto-portfolio"> <!--div de información oculta hasta presionar botón Saber más-->
+                        <span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nobis, corporis ipsa, sapiente non fugit incidunt iste vero aspernatur laboriosam inventore. Amet temporibus est, inventore nesciunt natus quod corporis accusantium!</p></span> <!--span con lorem oculto-->
+                        <div class="centrar-btn-oculto">
+                            <span class="icon-github"><a href="https://github.com/SuarezLautaro/TP-HTML-y-CSS-UTN-FullStack---T.N.--Suarez-Lautaro"><i class="bi bi-github"></i></a></span> <!--Boton con icono y enlace de github para ir al repositorio-->
+                            <span><button class="cerrar ocultar">Cerrar</button></span> <!--Botón cerrar para retornar el valor oculto del div-oculto-portfolio-->
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-leerMas"><button class="leer-mas">Saber más</button></div> <!--Botón Saber más que se oculta al pulsarlo pero vuelve al pulsar el botón de Cerrar-->
             </div>
-        </div>
+
     </section>
 
     <!----------------RESUME---------------->
@@ -532,7 +610,7 @@
             <div class="contenedor-derecho-contact">
                 <!--Formulario-->
                 <div class="formulario">
-                    <form action="">
+                    <form id="formulario-contact" action="">
                         <div class="input-juntos">
                             <div class="campo">
                                 <label for="">YOUR NAME</label>
@@ -562,6 +640,7 @@
                         <div class="campo">
                             <button class="submit" style="height: 50px;">SEND MESSAGE</button>  <!--Le doy 50 pixeles de height para lograr expandirlo de altura-->
                         </div>
+                        <div id="mensaje-enviado" class="contact-mensaje-enviado">Enviado con éxito</div>
                     </form>
                 </div>
             </div>
@@ -581,6 +660,8 @@
             <h6>Rainbow-Themes.</h6>
         </div>
     </footer>
+
+    <script src="app.js"></script>
     
 </body>
 </html>
